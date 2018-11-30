@@ -2,6 +2,15 @@
 
 Docker images with sysinternals baked in for spelunking what's going on inside windows containers.
 
+Clone this repository on a Windows Server machine with the appropriate version, then run:
+
+```
+docker build -f .\windowsservercore-1803\Dockerfile .\windowsservercore-1803 `
+  --tag sysinternals:1803
+```
+
+# Old readme text:
+
 Two versions of this image: 
 - nanoserver: `weshigbee/sysinternals` or `weshigbee/sysinternals:nanoserver`
 - windowsservercore: `weshigbee/sysinternals:windowsservercore`
