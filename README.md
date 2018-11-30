@@ -5,8 +5,15 @@ Docker images with sysinternals baked in for spelunking what's going on inside w
 Clone this repository on a Windows Server machine with the appropriate version, then run:
 
 ```
+& 'C:\Program Files\Git\bin\git.exe' clone `
+  https://github.com/pjh/docker-windows-sysinternals.git
+cd docker-windows-sysinternals
 docker build -f .\windowsservercore-1803\Dockerfile .\windowsservercore-1803 `
-  --tag sysinternals:1803
+  --tag pjh/sysinternals:1803
+
+gcloud auth configure-docker
+docker tag pjh/sysinternals:1803 us.gcr.io/<PROJECT>/sysinternals:1803
+docker push us.gcr.io/<PROJECT>/sysinternals:1803
 ```
 
 # Old readme text:
